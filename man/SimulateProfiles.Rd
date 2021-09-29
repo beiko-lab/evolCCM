@@ -11,8 +11,7 @@ SimulateProfiles(phytree, alpha, B, root=F)
 
 \item{alpha}{a vector of the intrinsic rates (\eqn{\alpha}) in CCM. The length of the vector decides how many profiles to simulate.}
 
-\item{B}{a symmetric association matrix (\eqn{\Beta}) in CCM. If the input matrix is not symmetric,
-the upper triangle of the matrix will be used.}
+\item{B}{a symmetric association matrix (\eqn{B}) in CCM. If the input matrix is not symmetric, the upper triangle of the matrix will be used.}
 
 \item{root}{a vector of states at root node. `root=F` as default (random states will be assigned at root).}
 }

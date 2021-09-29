@@ -51,7 +51,6 @@
 #' boxplot(estP)
 #' points(1:length(trueP), trueP, pch=8, col="red")
 #'
-#'
 #' @export
 
 EstimateCCM <- function(profiles, phytree, ip=0.1, pen=0.5,  ...){

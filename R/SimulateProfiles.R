@@ -1,14 +1,13 @@
 #' @title  Simulate profiles
 #'
 #' @description  Simulate binary profiles based on the Community Coevolution Model
-#' using the input tree and user-defined parameters
+#' using the input tree and user-defined parameters.
 #'
 #' @name SimulateProfiles
 #' @usage SimulateProfiles(phytree, alpha, B, root=F)
 #' @param phytree a phylogenetic tree.
 #' @param alpha a vector of the intrinsic rates (\eqn{\alpha}) in CCM. The length of the vector decides how many profiles to simulate.
-#' @param B a symmetric association matrix (\eqn{\Beta}) in CCM. If the input matrix is not symmetric,
-#' the upper triangle of the matrix will be used.
+#' @param B a symmetric association matrix (\eqn{B}) in CCM. If the input matrix is not symmetric, the upper triangle of the matrix will be used.
 #' @param root a vector of states at root node. `root=F` as default (random states will be assigned at root).
 #' @return a matrix containing simulated profiles.
 #' @examples

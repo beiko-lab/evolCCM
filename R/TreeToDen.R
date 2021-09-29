@@ -1,7 +1,7 @@
 #' Convert tree to dendrogram
 #'
 #' Convert the non-ultrametric tree to a dendrogram for `ProfilePlot()` to plot the profiles using
-#' the `chronos()` function from `ape` package
+#' the `chronos()` function from `ape` package.
 #'
 #' @param tree an object of class "phylo"
 #' @return a dendrogram as an input for `ProfilePlot()` function

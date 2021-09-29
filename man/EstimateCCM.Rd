@@ -59,7 +59,6 @@ for (i in 1:20){
 boxplot(estP)
 points(1:length(trueP), trueP, pch=8, col="red")
 
-
 }
 \references{
 Paradis E, Schliep K (2019). “ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R.” Bioinformatics, 35, 526-528.
