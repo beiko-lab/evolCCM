@@ -2,15 +2,13 @@
 #'
 #' The function for estimating the parameters in CCM.
 #'
-#' @usage EstimateCCM = function(profiles, phytree, decomp = T, ip=0.1, pen=0.5, ... )
+#' @usage EstimateCCM = function(profiles, phytree, ip=0.1, pen=0.5, ... )
 #'
 #' @param profiles a matrix containing the profiles. Columns are profiles and rows are species.
 #' @param phytree a phylogenetic tree.
 #' @param ip the initial values for optimizer. For a better convergence, a good set of starting values could be the estimates by a large tuning parameter.
-#' @param decomp a logical value. Defual is `decomp=T` indicating matrix decomposition will be used (recommend), otherwise matrix exponential will be computed directly (slow).
 #' @param pen the tuning parameter \eqn{\lambda}. Default value is 0.5. Value of 0 means no regularization.
 #' @param ... control parameters available to optimizer `nlminb` such as `trace`, `rel.tol`, .... .Example See `?nlminb`, 'control' argument .
-#' @import Matrix
 #' @return a list with following elements
 #' \itemize{
 #' \item alpha: estimated intrinsic rates.
@@ -56,7 +54,7 @@
 #'
 #' @export
 
-EstimateCCM <- function(profiles, phytree, decomp = T, ip=0.1, pen=0.5,  ...){
+EstimateCCM <- function(profiles, phytree, ip=0.1, pen=0.5,  ...){
     ### Main function for parameter estimation based on `ace()` from `ape` package.
     if (nrow(profiles) != length(phytree$tip.label)){
         stop("the profile matrix size doesn't match the number of tips on the tree.")
@@ -109,20 +107,11 @@ EstimateCCM <- function(profiles, phytree, decomp = T, ip=0.1, pen=0.5,  ...){
             anc <- e1[i]
             des1 <- e2[i]
             des2 <- e2[j]
-            if (decomp){
-                v.l <- GAMMA %*% diag(exp(lambda * EL[i])) %*%
+            v.l <- GAMMA %*% diag(exp(lambda * EL[i])) %*%
                     invGAMMA %*% liks[des1, ]
-                v.r <- GAMMA %*% diag(exp(lambda * EL[j])) %*%
+            v.r <- GAMMA %*% diag(exp(lambda * EL[j])) %*%
                     invGAMMA %*% liks[des2, ]
-                v <- v.l * v.r
-
-            } else {
-                v.l <- as.matrix(Matrix::expm(Q * EL[i]) %*% liks[des1, ])
-                v.r <- as.matrix(Matrix::expm(Q * EL[j]) %*% liks[des2, ])
-                v <- v.l * v.r
-            }
-
-
+            v <- v.l * v.r
             comp[anc] <- sum(v)
             liks[anc, ] <- v/comp[anc]
         }

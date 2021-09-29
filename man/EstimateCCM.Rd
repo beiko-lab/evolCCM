@@ -4,14 +4,12 @@
 \alias{EstimateCCM}
 \title{Estimate the parameters in CCM}
 \usage{
-EstimateCCM = function(profiles, phytree, decomp = T, ip=0.1, pen=0.5, ... )
+EstimateCCM = function(profiles, phytree, ip=0.1, pen=0.5, ... )
 }
 \arguments{
 \item{profiles}{a matrix containing the profiles. Columns are profiles and rows are species.}
 
 \item{phytree}{a phylogenetic tree.}
-
-\item{decomp}{a logical value. Defual is `decomp=T` indicating matrix decomposition will be used (recommend), otherwise matrix exponential will be computed directly.}
 
 \item{ip}{the initial values for optimizer. For a better convergence, a good set of starting values could be the estimates by a large tuning parameter.}
 
