@@ -32,6 +32,5 @@ install.packages("gplots")
 
 ## Documentation
 
-For detailed instructions, please see the package [manual]( https://github.com/beiko-lab/evolCCM/evolCCM_manual.pdf). 
+For detailed instructions, please see the package [manual](https://github.com/beiko-lab/evolCCM/blob/main/evolCCM_manual.pdf). 
 
-Here is an example:
