@@ -14,7 +14,7 @@ a dendrogram as an input for `ProfilePlot()` function
 }
 \description{
 Convert the non-ultrametric tree to a dendrogram for `ProfilePlot()` to plot the profiles using
-the `chronos()` function from `ape` package
+the `chronos()` function from `ape` package.
 }
 \examples{
 #library(ape)

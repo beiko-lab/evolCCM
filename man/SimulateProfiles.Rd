@@ -20,7 +20,7 @@ a matrix containing simulated profiles.
 }
 \description{
 Simulate binary profiles based on the Community Coevolution Model
-using the input tree and user-defined parameters
+using the input tree and user-defined parameters.
 }
 \examples{
 set.seed(123)

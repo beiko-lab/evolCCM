@@ -5,7 +5,7 @@
 #' @param aE a list returned by `EstimateCCM()`.
 #' @return a list with following elements:
 #' \itemize{
-#' \item rate: rate or converge. If value is too large (e.g. >300), consider increasing the tuning parameter \eqn{\lambda}.
+#' \item rate: rate of converge. If value is too large (e.g. >300), consider increasing the tuning parameter \eqn{\lambda}.
 #' \item hessianSE: estimated standard errors using Hessian matrix.
 #'
 #' }
