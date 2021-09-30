@@ -42,7 +42,7 @@ sigScore <- aE$nlm.par[5] / estSE[5]
 print(2*(1 - pnorm(abs(sigScore))))
 
 # simulate a pair with interaction
-B[1,2]<-B[2,1] <- 0.5 # moderate strength
+B[1,2]<-B[2,1] <- 0.5 # set an interaction between genes
 simDF <- SimulateProfiles(t, alpha, B)
 ProfilePlot(simDF, d)
 aE <- EstimateCCM(profiles = simDF, phytree=t)

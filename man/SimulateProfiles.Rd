@@ -30,7 +30,7 @@ t <- rtree(50)
 n <- 5
 # assigning parameter values.
 # The parameters should be in a reasonable scale otherwise the simulated profiles may have all 0s or 1s.
-alpha =runif(n, -0.5, 2) # assign n random intrinsic rates.
+alpha <- runif(n, -0.5, 2) # assign n random intrinsic rates.
 association matrix B
 B <- matrix(0,n,n)
 B[1:3,1:3] <- 1 # first 3 genes are correlated. The other 2 have no interaction with others

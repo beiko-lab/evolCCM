@@ -9,9 +9,9 @@
 #' @param dend the dendrogram that will be plotted on the left side. See `TreeToDen()`.
 #' @import gplots
 #' @examples
-#' d = TreeToDend(rtree(50))
-#' p = matrix(sample(0:1,100, replace=T), nrow=50)
-#' rownames(p) = labels(d)
+#' d <- TreeToDend(rtree(50))
+#' p <-  matrix(sample(0:1,100, replace=T), nrow=50)
+#' rownames(p) <- labels(d)
 #' ProfilePlot(p, d, main="Plot of two profiles")
 #' @export
 

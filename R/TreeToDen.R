@@ -9,9 +9,9 @@
 #' @examples
 #' #library(ape)
 #' # create a random 50-tip tree
-#' t = rtree(50)
+#' t <- rtree(50)
 #' plot(t)
-#' d = TreeToDend(t)
+#' d <- TreeToDend(t)
 #' plot(d)
 #' @export
 

@@ -27,7 +27,7 @@
 #' # generate a ranom 200-tip tree.
 #' # Larger tree contains more information and tends to give better MLEs.
 #' t <- rtree(200)
-#' # setting arbatrunderlying parameters for a pair
+#' # setting arbitrary underlying parameters for a pair
 #' n <- 2
 #' alpha <- c(0.1, 0.1)
 #' B <- matrix(0, n, n)

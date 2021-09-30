@@ -13,8 +13,10 @@ This is the R implementation for CCM (Community Coevolution Model) from the manu
 - [gplots](https://cran.r-project.org/web/packages/gplots/index.html)
 
 ```
-install.packages("ape")
-install.packages("gplots")
+# install.packages("ape")
+# install.packages("gplots")
+library(ape)
+library(gplots)
 ```
 
 
