@@ -2,7 +2,7 @@
 R package for CCM (Community Coevolution Model).
 
 ## Introduction
-This is the R implementation for CCM (Community Coevolution Model) from the manuscript "The Community Coevolution Model with Application to the Study of Evolutionary Relationships between Genes based on Phylogenetic Profiles". It includes the main functions for profiles simulation, profiles visualization and CCM estimation.
+This is the R implementation for CCM (Community Coevolution Model) from the manuscript "The Community Coevolution Model with Application to the Study of Evolutionary Relationships between Genes based on Phylogenetic Profiles". This package war written in R v4.0.2 and includes the main functions for profiles simulation, profiles visualization and CCM estimation.
 
 ## Installation
 
