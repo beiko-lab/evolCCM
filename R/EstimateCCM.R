@@ -46,7 +46,6 @@
 #'     # or estP[i,] = aE$par same order as above
 #'     print(i)
 #' }
-#'
 #' # plot the estimates
 #' boxplot(estP)
 #' points(1:length(trueP), trueP, pch=8, col="red")

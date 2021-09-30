@@ -31,6 +31,13 @@ devtools::install_github("beiko-lab/evolCCM")
 library(evolCCM)
 ```
 
+## List of functions
+
+- `TreeToDen()`: Convert tree to dendrogram for plotting.
+- `ProfilePlot()`: Plot the profiles along with the tree.
+- `SimulateProfile()`: Simulate binary profiles.
+- `EstimateCCM()`: Estimate parameters in CCM model.
+- `ProcessAE()`: Calculate the standard errors of parameter estimates.
 
 ## Documentation
 
