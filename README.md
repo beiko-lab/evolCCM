@@ -41,5 +41,5 @@ library(evolCCM)
 
 ## Documentation
 
-For detailed instructions, please see the package [manual](https://github.com/beiko-lab/evolCCM/blob/main/evolCCM_manual.pdf). 
+For detailed instructions and examples, please see the package [manual](https://github.com/beiko-lab/evolCCM/blob/main/evolCCM_manual.pdf). 
 
