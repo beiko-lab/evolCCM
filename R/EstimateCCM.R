@@ -95,6 +95,8 @@ EstimateCCM <- function(profiles, phytree, ip=0.1, pen=0.5,  ...){
         diag(C) = gldifs
         C[lower.tri(C)] = t(C)[lower.tri(C)]
         Q = ConstructQunsym(C, p0s)
+        Q[Q == Inf] <- 1e13
+        Q[Q == -Inf] <- -1e13
         diag(Q) <- -rowSums(Q)
         decompo <- eigen(Q)
         lambda <- decompo$values
@@ -111,9 +113,9 @@ EstimateCCM <- function(profiles, phytree, ip=0.1, pen=0.5,  ...){
                     invGAMMA %*% liks[des2, ]
             v <- v.l * v.r
             comp[anc] <- sum(v)
-            liks[anc, ] <- v/comp[anc]
         }
-        dev <- -1 * sum(log(comp[-TIPS]))
+        nonNeg_comp <- ifelse(comp <= 0, 1e-13, comp)
+        dev <- -1 * sum(log(nonNeg_comp[-TIPS]))
         penalty = pen*sum( p^2)
         dev=dev+penalty
         if (is.na(dev))
