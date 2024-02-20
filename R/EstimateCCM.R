@@ -113,6 +113,7 @@ EstimateCCM <- function(profiles, phytree, ip=0.1, pen=0.5,  ...){
                     invGAMMA %*% liks[des2, ]
             v <- v.l * v.r
             comp[anc] <- sum(v)
+	    liks[anc, ] <- v/comp[anc]
         }
         nonNeg_comp <- ifelse(comp <= 0, 1e-13, comp)
         dev <- -1 * sum(log(nonNeg_comp[-TIPS]))
