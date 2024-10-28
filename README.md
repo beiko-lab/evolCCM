@@ -44,3 +44,5 @@ library(evolCCM)
 For detailed instructions and examples, please see the package [manual](https://github.com/beiko-lab/evolCCM/blob/main/evolCCM_manual.pdf). 
 
 A brief tutorial can also be found [here](https://github.com/beiko-lab/evolCCM/blob/main/A_brief_tutorial_CCM.pdf).
+
+A parallel version of the EvolCCM is available [here](R/ParallelEvolCCM.R).
